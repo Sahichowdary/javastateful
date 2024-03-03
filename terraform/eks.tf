@@ -1,5 +1,5 @@
 resource "aws_eks_cluster" "eks_main" {
-  name     = "Demo POC"
+  name     = "Demo_POC"
   role_arn = var.eks_cluster_role
 
   vpc_config {
@@ -10,13 +10,10 @@ resource "aws_eks_cluster" "eks_main" {
 
   version = "1.29"
 
-  encryption_config {
-    resources = secrets
-    provider {
-        key_arn = var.eks_encryption_key
-    }
-  }
-
-  security_group_ids = [aws_security_group.eks_cluster_sg.id]
-
+ //encryption_config {
+ //   resources = secrets
+ //   provider {
+ //       key_arn = var.eks_encryption_key
+ //   }
+ // }
 }
