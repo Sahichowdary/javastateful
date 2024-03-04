@@ -44,7 +44,7 @@ resource "aws_wafv2_web_acl" "waf_poc" {
       }
     }
 
-    token_domains = ["mywebsite.com", "myotherwebsite.com"]
+#   token_domains = ["mywebsite.com", "myotherwebsite.com"]
 
     visibility_config {
       cloudwatch_metrics_enabled = false
@@ -66,6 +66,6 @@ resource "aws_wafv2_web_acl" "waf_poc" {
 }
 
 resource "aws_wafv2_web_acl_association" "wascdnacl" {
-  resource_arn = aws_cloudfront_cdnpocjava.arn
-  web_acl_arn  = aws_wafv2_waf_poc.arn
+  resource_arn = aws_cloudfront.cdnpocjava.arn
+  web_acl_arn  = aws_wafv2.waf_poc.arn
 }
