@@ -14,7 +14,7 @@ resource "aws_subnet" "vpc_private_subnet_private_1" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "pocdemo-subnet-private1-us-east-1a"
+    Name = "pocdemo-subnet-private1-us-west-2a"
   }
 }
 
@@ -34,10 +34,10 @@ resource "aws_route_table_association" "vpc_private_subnet_private_1_rtb_associa
 resource "aws_subnet" "vpc_private_subnet_private_2" {
   vpc_id     = aws_vpc.vpc_private.id
   cidr_block = "172.34.16.0/20"
-  availability_zone = var.availability_zone
+  availability_zone = us-west-2b
 
   tags = {
-    Name = "pocdemo-subnet-private2-us-east-1a"
+    Name = "pocdemo-subnet-private2-us-west-2b"
   }
 }
 
@@ -52,7 +52,7 @@ resource "aws_subnet" "vpc_private_subnet_private_3" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "pocdemo-subnet-private3-us-east-1a"
+    Name = "pocdemo-subnet-private3-us-west-2a"
   }
 }
 
