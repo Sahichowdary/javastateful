@@ -12,6 +12,6 @@ resource "aws_route53_record" "route_poc" {
   name    = "poc-java.com"
   type    = "A"
   ttl     = 300
-  records = [xxxxxxxxxx]
+#  records = [xxxxxxxxxx]
 }
 
