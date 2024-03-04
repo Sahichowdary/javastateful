@@ -7,6 +7,10 @@ variable "availability_zone" {
     default = "us-west-2a"
 }
 
+variable "availability_zone2" {
+    default = "us-west-2b"
+}
+
 variable "eks_cluster_role" {
     default = "arn:aws:iam::036965198866:role/AmazonEKSClusterRole"
 }
