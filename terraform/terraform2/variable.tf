@@ -1,6 +1,6 @@
 variable "region" {
     description = "used to specify the region"
-    default = "us-west-2"
+    default = "us-east-1"
 }
 
 variable "availability_zone" {
