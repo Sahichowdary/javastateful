@@ -14,7 +14,7 @@ resource "aws_subnet" "vpc_public_subnet_public_1" {
   availability_zone = var.availability_zone
 
   tags = {
-    Name = "pocdemo-subnet-public1-us-east-1a"
+    Name = "pocdemo-subnet-public1-us-west-2a"
   }
 }
 
