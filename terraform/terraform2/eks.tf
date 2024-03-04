@@ -10,10 +10,10 @@ resource "aws_eks_cluster" "eks_main" {
 
   version = "1.29"
 
-  encryption_config {
-    resources = secrets
-    provider {
-        key_arn = var.eks_encryption_key
-    }
-  }
+//  encryption_config {
+//    resources = secrets
+//    provider {
+//        key_arn = var.eks_encryption_key
+//    }
+//  }
 }
